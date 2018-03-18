@@ -22,7 +22,7 @@ namespace GoogleMap
             InitializeComponent();
         }
         const string API_KEY = "AIzaSyCUq-MMkWIaCDn0Bl6gBlVo40KGgWd1rd0";
-        public string myIP = "";
+        public static string myIP = "";
 
         private void BtnSearchByAddress_Click(object sender, EventArgs e)
         {
@@ -36,7 +36,6 @@ namespace GoogleMap
                 string url = " http://maps.google.com/maps?q=" + System.Web.HttpUtility.UrlEncode(tbLat.Text)+"%2C"+ System.Web.HttpUtility.UrlEncode(tbLong.Text);
                 webBrowser1.Navigate(url);
             }
-
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -44,10 +43,9 @@ namespace GoogleMap
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-               Thread t = new Thread(FindMyIP);
-               t.Start();
+            FindMyIP();
         }
 
         private async void FindMyIP()
@@ -63,8 +61,9 @@ namespace GoogleMap
 
             IP root = JsonConvert.DeserializeObject<IP>(result);
 
-                myIP = root.ip;
-                RbMyIP.Text = "From My IP to Coordinate+/r/n" + myIP;
+                myIP =  root.ip +"";
+                RbMyIP.Text = "From My IP to Coordinate \r\n" + myIP.ToString();
+            
             }
             catch (Exception)
             {
@@ -74,7 +73,6 @@ namespace GoogleMap
 
         private async void btn_Click_Click(object sender, EventArgs e)
         {
-
 
             if (RbAddressToCoordinate.Checked)
             {
@@ -101,9 +99,7 @@ namespace GoogleMap
                 rbCoordinate.Checked = true;
 
                 FindAddress();
-            }
-
-           
+            }  
         }
 
         private  async void FindAddress()

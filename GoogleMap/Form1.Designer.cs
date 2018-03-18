@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnGet = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.RbMyIP = new System.Windows.Forms.RadioButton();
             this.RbCoordinateToAddress = new System.Windows.Forms.RadioButton();
             this.RbAddressToCoordinate = new System.Windows.Forms.RadioButton();
             this.gbCoordinate = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.RbMyIP = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -116,6 +116,16 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Get  Info";
+            // 
+            // RbMyIP
+            // 
+            this.RbMyIP.AutoSize = true;
+            this.RbMyIP.Location = new System.Drawing.Point(31, 141);
+            this.RbMyIP.Name = "RbMyIP";
+            this.RbMyIP.Size = new System.Drawing.Size(278, 29);
+            this.RbMyIP.TabIndex = 3;
+            this.RbMyIP.Text = "From My ip to Coodinate";
+            this.RbMyIP.UseVisualStyleBackColor = true;
             // 
             // RbCoordinateToAddress
             // 
@@ -264,16 +274,6 @@
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(1266, 992);
             this.webBrowser1.TabIndex = 0;
-            // 
-            // RbMyIP
-            // 
-            this.RbMyIP.AutoSize = true;
-            this.RbMyIP.Location = new System.Drawing.Point(31, 141);
-            this.RbMyIP.Name = "RbMyIP";
-            this.RbMyIP.Size = new System.Drawing.Size(279, 29);
-            this.RbMyIP.TabIndex = 3;
-            this.RbMyIP.Text = "From My p to Coodinate ";
-            this.RbMyIP.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
