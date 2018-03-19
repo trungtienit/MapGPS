@@ -47,7 +47,6 @@
             this.tbAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -56,12 +55,13 @@
             this.groupBox3.SuspendLayout();
             this.gbCoordinate.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -75,11 +75,13 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Size = new System.Drawing.Size(1914, 995);
-            this.splitContainer1.SplitterDistance = 638;
+            this.splitContainer1.SplitterDistance = 500;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel1.Controls.Add(this.btnGet);
@@ -91,12 +93,14 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(495, 983);
+            this.panel1.Size = new System.Drawing.Size(485, 983);
             this.panel1.TabIndex = 0;
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(121, 791);
+            this.btnGet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGet.Location = new System.Drawing.Point(158, 801);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(181, 49);
             this.btnGet.TabIndex = 5;
@@ -106,13 +110,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.RbMyIP);
             this.groupBox3.Controls.Add(this.RbCoordinateToAddress);
             this.groupBox3.Controls.Add(this.RbAddressToCoordinate);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox3.Location = new System.Drawing.Point(30, 554);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(400, 231);
+            this.groupBox3.Size = new System.Drawing.Size(428, 207);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Get  Info";
@@ -152,6 +158,8 @@
             // 
             // gbCoordinate
             // 
+            this.gbCoordinate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbCoordinate.Controls.Add(this.tbLong);
             this.gbCoordinate.Controls.Add(this.label3);
             this.gbCoordinate.Controls.Add(this.tbLat);
@@ -160,7 +168,7 @@
             this.gbCoordinate.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.gbCoordinate.Location = new System.Drawing.Point(30, 298);
             this.gbCoordinate.Name = "gbCoordinate";
-            this.gbCoordinate.Size = new System.Drawing.Size(400, 138);
+            this.gbCoordinate.Size = new System.Drawing.Size(449, 138);
             this.gbCoordinate.TabIndex = 4;
             this.gbCoordinate.TabStop = false;
             this.gbCoordinate.Text = "Coordinate";
@@ -169,7 +177,7 @@
             // 
             this.tbLong.Location = new System.Drawing.Point(144, 90);
             this.tbLong.Name = "tbLong";
-            this.tbLong.Size = new System.Drawing.Size(233, 31);
+            this.tbLong.Size = new System.Drawing.Size(225, 31);
             this.tbLong.TabIndex = 8;
             // 
             // label3
@@ -185,7 +193,7 @@
             // 
             this.tbLat.Location = new System.Drawing.Point(144, 39);
             this.tbLat.Name = "tbLat";
-            this.tbLat.Size = new System.Drawing.Size(233, 31);
+            this.tbLat.Size = new System.Drawing.Size(225, 31);
             this.tbLat.TabIndex = 6;
             // 
             // label2
@@ -199,12 +207,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.rbCoordinate);
             this.groupBox1.Controls.Add(this.rbAddress);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Location = new System.Drawing.Point(30, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(400, 138);
+            this.groupBox1.Size = new System.Drawing.Size(409, 138);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search by";
@@ -212,7 +222,7 @@
             // rbCoordinate
             // 
             this.rbCoordinate.AutoSize = true;
-            this.rbCoordinate.Location = new System.Drawing.Point(229, 40);
+            this.rbCoordinate.Location = new System.Drawing.Point(221, 40);
             this.rbCoordinate.Name = "rbCoordinate";
             this.rbCoordinate.Size = new System.Drawing.Size(148, 29);
             this.rbCoordinate.TabIndex = 1;
@@ -234,7 +244,9 @@
             // 
             // BtnSearchByAddress
             // 
-            this.BtnSearchByAddress.Location = new System.Drawing.Point(121, 460);
+            this.BtnSearchByAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSearchByAddress.Location = new System.Drawing.Point(207, 462);
             this.BtnSearchByAddress.Name = "BtnSearchByAddress";
             this.BtnSearchByAddress.Size = new System.Drawing.Size(181, 49);
             this.BtnSearchByAddress.TabIndex = 2;
@@ -244,13 +256,17 @@
             // 
             // tbAddress
             // 
+            this.tbAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbAddress.Location = new System.Drawing.Point(24, 222);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(446, 31);
+            this.tbAddress.Size = new System.Drawing.Size(375, 31);
             this.tbAddress.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 180);
             this.label1.Name = "label1";
@@ -260,20 +276,14 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.webBrowser1);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1266, 992);
+            this.panel2.Size = new System.Drawing.Size(1266, 989);
             this.panel2.TabIndex = 0;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1266, 992);
-            this.webBrowser1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -298,7 +308,6 @@
             this.gbCoordinate.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -309,7 +318,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnSearchByAddress;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbCoordinate;
         private System.Windows.Forms.RadioButton rbAddress;

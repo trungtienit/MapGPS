@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Json_Parsing;
 using System.Threading;
+using CefSharp.WinForms;
+using CefSharp;
 
 namespace GoogleMap
 {
@@ -20,22 +22,39 @@ namespace GoogleMap
         public Form1()
         {
             InitializeComponent();
+            InitializeChromium();
+        }
+        public ChromiumWebBrowser chromeBrowser;
+        public void InitializeChromium()
+        {
+            CefSettings settings = new CefSettings();
+            // Initialize cef with the provided settings
+            Cef.Initialize(settings);
+            // Create a browser component
+            chromeBrowser = new ChromiumWebBrowser("http://maps.google.com/maps");
+            // Add it to the form and fill it to the form window.
+            this.panel2.Controls.Add(chromeBrowser);
+           // chromeBrowser.Dock = DockStyle.Fill;
         }
         const string API_KEY = "AIzaSyCUq-MMkWIaCDn0Bl6gBlVo40KGgWd1rd0";
         public static string myIP = "";
 
         private void BtnSearchByAddress_Click(object sender, EventArgs e)
         {
+            string url = "";
             if (rbAddress.Checked)
             {
-                string url = " http://maps.google.com/maps?q=" + System.Web.HttpUtility.UrlEncode(tbAddress.Text);
-                webBrowser1.Navigate(url);
+                 url = " http://maps.google.com/maps?q=" + System.Web.HttpUtility.UrlEncode(tbAddress.Text);
+                // webBrowser1.Navigate(url);
+              
             }
             else if (rbCoordinate.Checked)
             {
-                string url = " http://maps.google.com/maps?q=" + System.Web.HttpUtility.UrlEncode(tbLat.Text)+"%2C"+ System.Web.HttpUtility.UrlEncode(tbLong.Text);
-                webBrowser1.Navigate(url);
+                 url = " http://maps.google.com/maps?q=" + System.Web.HttpUtility.UrlEncode(tbLat.Text)+"%2C"+ System.Web.HttpUtility.UrlEncode(tbLong.Text);
+              //  webBrowser1.Navigate(url);
             }
+
+            chromeBrowser.Load(url);
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -54,7 +73,6 @@ namespace GoogleMap
             {
             string url = "https://api.ipify.org/?format=json";
 
-            // webBrowser1.Navigate(url);
             HttpClient client = new HttpClient();
             var response = await client.GetAsync(url);
             string result = await response.Content.ReadAsStringAsync();
@@ -63,7 +81,6 @@ namespace GoogleMap
 
                 myIP =  root.ip +"";
                 RbMyIP.Text = "From My IP to Coordinate \r\n" + myIP.ToString();
-            
             }
             catch (Exception)
             {
